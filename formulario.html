@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/micss.css">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <script src="/Parcial/js/vali.js"></script>
+    <script src="js/fetch.js"></script>
+
+    <form class="formu" id="formu" method="get">
+
+        <h1>Agregados a la Lista de Schindler</h1>
+
+        <P>Nombre:</P> <input type="text" name="names" id="names" class="tam" maxlength="30">
+
+        <p>Apellido:</p><input type="text" id="latsname" class="tam" maxlength="30">
+
+        <P>Teléfono:</P> <input type="tel" id="tele" class="tam" maxlength="8">
+
+        <p>Correo:</p><input type="email" id="mail" class="tam">
+
+        <p>descripción:</p><input type="text" id="descrip" class="tam" placeholder="Judio, Polaco, etc.." required>
+
+        <P>Año:</P><input type="number" id="year" value="19" min="15" max="80">
+
+        <p>Genero:</p> <select id="multi">
+            <option>Hombre</option>
+            <option>Mujer</option>
+        </select>
+
+        <br></br>
+        <button type="submit" onclick="return validar()" id="envio">Enviar</button>
+        <br></br>
+    </form>
+</body>
+
+
+<div class="devuelve">
+    <P class="p2">Envios Realizados</P>
+    <div id="envios"></div>
+</div>
+
+<div class="info">
+    <P class="p2">
+            Personal de la fabrica Emalia
+    </P>
+    <P class="p2">
+        <button type="number" onclick="return traer()">Ver</button> 
+    </P>
+
+    <div class="busqueda" id="contenido">
+    </div>
+
+</div>
+
+<script src="/Parcial/js/app.js"></script>
+
+
+</html>
